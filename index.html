@@ -1,0 +1,571 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bella Hair Accessories - Demo</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <link href="styles.css" rel="stylesheet">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm sticky-top">
+        <div class="container">
+            <a class="navbar-brand fw-bold" href="#home">
+                <i class="fas fa-ribbon text-pink me-2"></i>Bella Hair
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#home">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#products">Products</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#about">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#contact">Contact</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link position-relative" href="#cart">
+                            <i class="fas fa-shopping-cart"></i>
+                            <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-pink" id="cart-count">0</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero-section">
+        <div class="container">
+            <div class="row align-items-center min-vh-100">
+                <div class="col-lg-6">
+                    <div class="hero-content">
+                        <div class="hero-badge mb-3">
+                            <span class="badge bg-pink text-white">Handmade in Serbia 🇷🇸</span>
+                        </div>
+                        <h1 class="display-4 fw-bold text-dark mb-4">Beautiful Hair Accessories for Every Style</h1>
+                        <p class="lead text-muted mb-4">Premium quality hair ties, scrunchies, and accessories handmade with love in Belgrade. Perfect for expressing your unique style.</p>
+                        <div class="d-flex gap-3 flex-column flex-md-row">
+                            <button class="btn btn-pink btn-lg" onclick="scrollToProducts()">
+                                <i class="fas fa-shopping-bag me-2"></i>Shop Collection
+                            </button>
+                            <button class="btn btn-outline-pink btn-lg" onclick="scrollToAbout()">
+                                <i class="fas fa-info-circle me-2"></i>Our Story
+                            </button>
+                        </div>
+                        <div class="mt-4">
+                            <div class="trust-badges">
+                                <small class="text-muted d-block mb-2">
+                                    <i class="fas fa-truck me-2"></i>Free shipping in Belgrade over 2000 RSD
+                                </small>
+                                <small class="text-muted d-block mb-2">
+                                    <i class="fas fa-shield-alt me-2"></i>Secure payment processing
+                                </small>
+                                <small class="text-muted d-block">
+                                    <i class="fas fa-star me-2"></i>4.9/5 customer rating
+                                </small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="hero-image text-center">
+                        <img src="https://images.pexels.com/photos/7792648/pexels-photo-7792648.jpeg?auto=compress&cs=tinysrgb&w=500&h=600" alt="Hair Accessories" class="img-fluid rounded-3 shadow-lg">
+                        <div class="hero-stats mt-3">
+                            <div class="row text-center">
+                                <div class="col-4">
+                                    <div class="stat-item">
+                                        <h5 class="text-pink fw-bold">1000+</h5>
+                                        <small class="text-muted">Happy Customers</small>
+                                    </div>
+                                </div>
+                                <div class="col-4">
+                                    <div class="stat-item">
+                                        <h5 class="text-pink fw-bold">50+</h5>
+                                        <small class="text-muted">Unique Designs</small>
+                                    </div>
+                                </div>
+                                <div class="col-4">
+                                    <div class="stat-item">
+                                        <h5 class="text-pink fw-bold">100%</h5>
+                                        <small class="text-muted">Handmade</small>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="py-5 bg-light">
+        <div class="container">
+            <div class="row g-4">
+                <div class="col-md-4 text-center">
+                    <div class="feature-box p-4">
+                        <i class="fas fa-gem fa-3x text-pink mb-3"></i>
+                        <h4>Premium Quality</h4>
+                        <p class="text-muted">Made with finest materials, gentle on your hair</p>
+                    </div>
+                </div>
+                <div class="col-md-4 text-center">
+                    <div class="feature-box p-4">
+                        <i class="fas fa-palette fa-3x text-pink mb-3"></i>
+                        <h4>Unique Designs</h4>
+                        <p class="text-muted">Exclusive patterns you won't find elsewhere</p>
+                    </div>
+                </div>
+                <div class="col-md-4 text-center">
+                    <div class="feature-box p-4">
+                        <i class="fas fa-heart fa-3x text-pink mb-3"></i>
+                        <h4>Handcrafted</h4>
+                        <p class="text-muted">Each piece made with attention to detail</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Products Section -->
+    <section id="products" class="py-5">
+        <div class="container">
+            <div class="text-center mb-5">
+                <h2 class="display-5 fw-bold">Our Products</h2>
+                <p class="lead text-muted">Discover our beautiful collection of hair accessories</p>
+            </div>
+
+            <!-- Category Filter -->
+            <div class="text-center mb-4">
+                <div class="btn-group" role="group">
+                    <button type="button" class="btn btn-outline-pink active" onclick="filterProducts('all')">All Products</button>
+                    <button type="button" class="btn btn-outline-pink" onclick="filterProducts('scrunchies')">Scrunchies</button>
+                    <button type="button" class="btn btn-outline-pink" onclick="filterProducts('clips')">Hair Clips</button>
+                    <button type="button" class="btn btn-outline-pink" onclick="filterProducts('bands')">Headbands</button>
+                </div>
+            </div>
+
+            <!-- Products Grid -->
+            <div class="row g-4" id="products-grid">
+                <!-- Product 1 -->
+                <div class="col-lg-4 col-md-6 product-item" data-category="scrunchies">
+                    <div class="card product-card h-100 border-0 shadow-sm">
+                        <div class="product-image-container">
+                            <img src="https://images.pexels.com/photos/6044135/pexels-photo-6044135.jpeg?auto=compress&cs=tinysrgb&w=300&h=300" class="card-img-top product-image" alt="Silk Scrunchie">
+                            <div class="product-overlay">
+                                <button class="btn btn-pink btn-sm" onclick="quickView(1)">
+                                    <i class="fas fa-eye me-1"></i>Quick View
+                                </button>
+                            </div>
+                        </div>
+                        <div class="card-body">
+                            <h5 class="card-title">Premium Silk Scrunchie</h5>
+                            <div class="product-rating mb-2">
+                                <div class="stars">
+                                    <i class="fas fa-star text-warning"></i>
+                                    <i class="fas fa-star text-warning"></i>
+                                    <i class="fas fa-star text-warning"></i>
+                                    <i class="fas fa-star text-warning"></i>
+                                    <i class="fas fa-star text-warning"></i>
+                                </div>
+                                <small class="text-muted">(47 reviews)</small>
+                            </div>
+                            <p class="text-muted small">Luxurious silk fabric, perfect for all hair types</p>
+                            <div class="product-badges mb-2">
+                                <span class="badge bg-light text-dark me-1">Premium</span>
+                                <span class="badge bg-success text-white">In Stock</span>
+                            </div>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <div>
+                                    <span class="h5 mb-0 text-pink">1,890 RSD</span>
+                                    <small class="text-muted d-block">Free shipping</small>
+                                </div>
+                                <button class="btn btn-pink btn-sm" onclick="addToCart(1, 'Premium Silk Scrunchie', 1890)">
+                                    <i class="fas fa-cart-plus"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product 2 -->
+                <div class="col-lg-4 col-md-6 product-item" data-category="clips">
+                    <div class="card product-card h-100 border-0 shadow-sm">
+                        <div class="product-image-container">
+                            <img src="https://images.pexels.com/photos/6044145/pexels-photo-6044145.jpeg?auto=compress&cs=tinysrgb&w=300&h=300" class="card-img-top product-image" alt="Hair Clip">
+                            <div class="product-overlay">
+                                <button class="btn btn-pink btn-sm" onclick="quickView(2)">
+                                    <i class="fas fa-eye me-1"></i>Quick View
+                                </button>
+                            </div>
+                        </div>
+                        <div class="card-body">
+                            <h5 class="card-title">Elegant Hair Clip</h5>
+                            <div class="product-rating mb-2">
+                                <div class="stars">
+                                    <i class="fas fa-star text-warning"></i>
+                                    <i class="fas fa-star text-warning"></i>
+                                    <i class="fas fa-star text-warning"></i>
+                                    <i class="fas fa-star text-warning"></i>
+                                    <i class="fas fa-star-half-alt text-warning"></i>
+                                </div>
+                                <small class="text-muted">(32 reviews)</small>
+                            </div>
+                            <p class="text-muted small">Stylish design with secure grip</p>
+                            <div class="product-badges mb-2">
+                                <span class="badge bg-info text-white me-1">Popular</span>
+                                <span class="badge bg-success text-white">In Stock</span>
+                            </div>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <div>
+                                    <span class="h5 mb-0 text-pink">1,290 RSD</span>
+                                    <small class="text-muted d-block">Free shipping</small>
+                                </div>
+                                <button class="btn btn-pink btn-sm" onclick="addToCart(2, 'Elegant Hair Clip', 1290)">
+                                    <i class="fas fa-cart-plus"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product 3 -->
+                <div class="col-lg-4 col-md-6 product-item" data-category="bands">
+                    <div class="card product-card h-100 border-0 shadow-sm">
+                        <div class="product-image-container">
+                            <img src="https://images.pexels.com/photos/6044144/pexels-photo-6044144.jpeg?auto=compress&cs=tinysrgb&w=300&h=300" class="card-img-top product-image" alt="Headband">
+                            <div class="product-overlay">
+                                <button class="btn btn-pink btn-sm" onclick="quickView(3)">
+                                    <i class="fas fa-eye me-1"></i>Quick View
+                                </button>
+                            </div>
+                        </div>
+                        <div class="card-body">
+                            <h5 class="card-title">Comfort Headband</h5>
+                            <div class="product-rating mb-2">
+                                <div class="stars">
+                                    <i class="fas fa-star text-warning"></i>
+                                    <i class="fas fa-star text-warning"></i>
+                                    <i class="fas fa-star text-warning"></i>
+                                    <i class="fas fa-star text-warning"></i>
+                                    <i class="fas fa-star text-warning"></i>
+                                </div>
+                                <small class="text-muted">(28 reviews)</small>
+                            </div>
+                            <p class="text-muted small">Soft, stretchy material for all-day comfort</p>
+                            <div class="product-badges mb-2">
+                                <span class="badge bg-warning text-dark me-1">Best Seller</span>
+                                <span class="badge bg-success text-white">In Stock</span>
+                            </div>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <div>
+                                    <span class="h5 mb-0 text-pink">1,590 RSD</span>
+                                    <small class="text-muted d-block">Free shipping</small>
+                                </div>
+                                <button class="btn btn-pink btn-sm" onclick="addToCart(3, 'Comfort Headband', 1590)">
+                                    <i class="fas fa-cart-plus"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product 4 -->
+                <div class="col-lg-4 col-md-6 product-item" data-category="scrunchies">
+                    <div class="card product-card h-100 border-0 shadow-sm">
+                        <div class="product-image-container">
+                            <img src="https://images.pexels.com/photos/6954861/pexels-photo-6954861.jpeg?auto=compress&cs=tinysrgb&w=300&h=300" class="card-img-top product-image" alt="Cotton Scrunchie">
+                            <div class="product-overlay">
+                                <button class="btn btn-pink btn-sm" onclick="quickView(4)">
+                                    <i class="fas fa-eye me-1"></i>Quick View
+                                </button>
+                            </div>
+                        </div>
+                        <div class="card-body">
+                            <h5 class="card-title">Cotton Scrunchie Set</h5>
+                            <div class="product-rating mb-2">
+                                <div class="stars">
+                                    <i class="fas fa-star text-warning"></i>
+                                    <i class="fas fa-star text-warning"></i>
+                                    <i class="fas fa-star text-warning"></i>
+                                    <i class="fas fa-star text-warning"></i>
+                                    <i class="fas fa-star text-warning"></i>
+                                </div>
+                                <small class="text-muted">(51 reviews)</small>
+                            </div>
+                            <p class="text-muted small">Pack of 3 colorful cotton scrunchies</p>
+                            <div class="product-badges mb-2">
+                                <span class="badge bg-danger text-white me-1">Limited</span>
+                                <span class="badge bg-success text-white">In Stock</span>
+                            </div>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <div>
+                                    <span class="h5 mb-0 text-pink">2,490 RSD</span>
+                                    <small class="text-muted d-block">Free shipping</small>
+                                </div>
+                                <button class="btn btn-pink btn-sm" onclick="addToCart(4, 'Cotton Scrunchie Set', 2490)">
+                                    <i class="fas fa-cart-plus"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product 5 -->
+                <div class="col-lg-4 col-md-6 product-item" data-category="clips">
+                    <div class="card product-card h-100 border-0 shadow-sm">
+                        <div class="product-image-container">
+                            <img src="https://images.pexels.com/photos/36741058/pexels-photo-36741058.jpeg?auto=compress&cs=tinysrgb&w=300&h=300" class="card-img-top product-image" alt="Decorative Clip">
+                            <div class="product-overlay">
+                                <button class="btn btn-pink btn-sm" onclick="quickView(5)">
+                                    <i class="fas fa-eye me-1"></i>Quick View
+                                </button>
+                            </div>
+                        </div>
+                        <div class="card-body">
+                            <h5 class="card-title">Decorative Hair Clip</h5>
+                            <div class="product-rating mb-2">
+                                <div class="stars">
+                                    <i class="fas fa-star text-warning"></i>
+                                    <i class="fas fa-star text-warning"></i>
+                                    <i class="fas fa-star text-warning"></i>
+                                    <i class="fas fa-star text-warning"></i>
+                                    <i class="far fa-star text-warning"></i>
+                                </div>
+                                <small class="text-muted">(19 reviews)</small>
+                            </div>
+                            <p class="text-muted small">Beautiful design with rhinestone details</p>
+                            <div class="product-badges mb-2">
+                                <span class="badge bg-purple text-white me-1">Exclusive</span>
+                                <span class="badge bg-success text-white">In Stock</span>
+                            </div>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <div>
+                                    <span class="h5 mb-0 text-pink">1,790 RSD</span>
+                                    <small class="text-muted d-block">Free shipping</small>
+                                </div>
+                                <button class="btn btn-pink btn-sm" onclick="addToCart(5, 'Decorative Hair Clip', 1790)">
+                                    <i class="fas fa-cart-plus"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product 6 -->
+                <div class="col-lg-4 col-md-6 product-item" data-category="bands">
+                    <div class="card product-card h-100 border-0 shadow-sm">
+                        <div class="product-image-container">
+                            <img src="https://images.pexels.com/photos/7446425/pexels-photo-7446425.jpeg?auto=compress&cs=tinysrgb&w=300&h=300" class="card-img-top product-image" alt="Sports Band">
+                            <div class="product-overlay">
+                                <button class="btn btn-pink btn-sm" onclick="quickView(6)">
+                                    <i class="fas fa-eye me-1"></i>Quick View
+                                </button>
+                            </div>
+                        </div>
+                        <div class="card-body">
+                            <h5 class="card-title">Sports Headband</h5>
+                            <div class="product-rating mb-2">
+                                <div class="stars">
+                                    <i class="fas fa-star text-warning"></i>
+                                    <i class="fas fa-star text-warning"></i>
+                                    <i class="fas fa-star text-warning"></i>
+                                    <i class="fas fa-star text-warning"></i>
+                                    <i class="fas fa-star-half-alt text-warning"></i>
+                                </div>
+                                <small class="text-muted">(23 reviews)</small>
+                            </div>
+                            <p class="text-muted small">Moisture-wicking fabric for active lifestyle</p>
+                            <div class="product-badges mb-2">
+                                <span class="badge bg-primary text-white me-1">Active</span>
+                                <span class="badge bg-success text-white">In Stock</span>
+                            </div>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <div>
+                                    <span class="h5 mb-0 text-pink">1,390 RSD</span>
+                                    <small class="text-muted d-block">Free shipping</small>
+                                </div>
+                                <button class="btn btn-pink btn-sm" onclick="addToCart(6, 'Sports Headband', 1390)">
+                                    <i class="fas fa-cart-plus"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-5 bg-light">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-6">
+                    <img src="https://images.pexels.com/photos/6044135/pexels-photo-6044135.jpeg?auto=compress&cs=tinysrgb&w=500&h=400" alt="Our Workshop" class="img-fluid rounded-3 shadow">
+                </div>
+                <div class="col-lg-6">
+                    <h2 class="display-5 fw-bold mb-4">About Bella Hair</h2>
+                    <p class="lead text-muted mb-4">Based in Belgrade, we create beautiful hair accessories that combine style, comfort, and quality.</p>
+                    <p class="text-muted mb-3">Founded with a passion for helping women express their unique style, our handcrafted accessories are made with love and attention to detail. Each piece is designed to be both beautiful and functional.</p>
+                    <p class="text-muted mb-4">We source the finest materials and use traditional techniques combined with modern designs to create accessories that you'll love to wear every day.</p>
+                    <div class="row g-3 mb-4">
+                        <div class="col-6">
+                            <div class="d-flex align-items-center">
+                                <i class="fas fa-check-circle text-pink me-2"></i>
+                                <span>Handmade in Serbia</span>
+                            </div>
+                        </div>
+                        <div class="col-6">
+                            <div class="d-flex align-items-center">
+                                <i class="fas fa-check-circle text-pink me-2"></i>
+                                <span>Premium materials</span>
+                            </div>
+                        </div>
+                        <div class="col-6">
+                            <div class="d-flex align-items-center">
+                                <i class="fas fa-check-circle text-pink me-2"></i>
+                                <span>Eco-friendly packaging</span>
+                            </div>
+                        </div>
+                        <div class="col-6">
+                            <div class="d-flex align-items-center">
+                                <i class="fas fa-check-circle text-pink me-2"></i>
+                                <span>Local delivery available</span>
+                            </div>
+                        </div>
+                    </div>
+                    <button class="btn btn-pink btn-lg" onclick="scrollToProducts()">
+                        <i class="fas fa-shopping-bag me-2"></i>Shop Our Collection
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-5">
+        <div class="container">
+            <div class="text-center mb-5">
+                <h2 class="display-5 fw-bold">Get In Touch</h2>
+                <p class="lead text-muted">Have questions? We'd love to hear from you!</p>
+            </div>
+            <div class="row">
+                <div class="col-lg-6 mx-auto">
+                    <div class="card border-0 shadow-sm">
+                        <div class="card-body p-4">
+                            <form id="contact-form">
+                                <div class="mb-3">
+                                    <label for="name" class="form-label">Name</label>
+                                    <input type="text" class="form-control" id="name" required>
+                                </div>
+                                <div class="mb-3">
+                                    <label for="email" class="form-label">Email</label>
+                                    <input type="email" class="form-control" id="email" required>
+                                </div>
+                                <div class="mb-3">
+                                    <label for="message" class="form-label">Message</label>
+                                    <textarea class="form-control" id="message" rows="4" required></textarea>
+                                </div>
+                                <button type="submit" class="btn btn-pink w-100">
+                                    <i class="fas fa-paper-plane me-2"></i>Send Message
+                                </button>
+                            </form>
+                        </div>
+                    </div>
+                    <div class="text-center mt-4">
+                        <div class="d-flex justify-content-center gap-3">
+                            <a href="#" class="text-pink fs-4"><i class="fab fa-instagram"></i></a>
+                            <a href="#" class="text-pink fs-4"><i class="fab fa-facebook"></i></a>
+                            <a href="#" class="text-pink fs-4"><i class="fab fa-tiktok"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-white py-4">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6">
+                    <h5><i class="fas fa-ribbon text-pink me-2"></i>Bella Hair</h5>
+                    <p class="text-muted">Beautiful hair accessories for every style</p>
+                </div>
+                <div class="col-md-6 text-md-end">
+                    <p class="text-muted mb-0">© 2024 Bella Hair. Demo Website</p>
+                    <small class="text-muted">Made with ❤️ in Belgrade</small>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Shopping Cart Modal -->
+    <div class="modal fade" id="cartModal" tabindex="-1">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Shopping Cart</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body">
+                    <div id="cart-items"></div>
+                    <div class="mt-3">
+                        <h5>Total: <span id="cart-total">0 RSD</span></h5>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Continue Shopping</button>
+                    <button type="button" class="btn btn-pink" onclick="checkout()">Checkout</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Quick View Modal -->
+    <div class="modal fade" id="quickViewModal" tabindex="-1">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Product Details</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <img id="quick-view-image" src="" alt="" class="img-fluid rounded">
+                        </div>
+                        <div class="col-md-6">
+                            <h4 id="quick-view-title"></h4>
+                            <p id="quick-view-description"></p>
+                            <h5 id="quick-view-price" class="text-pink"></h5>
+                            <div class="mt-3">
+                                <label class="form-label">Quantity:</label>
+                                <input type="number" class="form-control" value="1" min="1" id="quick-view-quantity">
+                            </div>
+                            <div class="mt-3">
+                                <button class="btn btn-pink w-100" onclick="addToCartFromQuickView()">
+                                    <i class="fas fa-cart-plus me-2"></i>Add to Cart
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
