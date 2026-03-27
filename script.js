@@ -25,8 +25,8 @@ var config = {
             name: "Satenski scrunchie — Klasik",
             category: "scrunchie",
             price: 550,
-            image: "https://images.pexels.com/photos/6044144/pexels-photo-6044144.jpeg?auto=compress&cs=tinysrgb&w=640&h=800",
-            alt: "Satenski scrunchie u toploj boji",
+            image: "https://images.pexels.com/photos/6044139/pexels-photo-6044139.jpeg?auto=compress&cs=tinysrgb&w=400&h=400",
+            alt: "Kolekcija svilenkastih scrunchie gumica u raznim bojama",
             desc: "Mekan satenski scrunchie koji ne ostavlja tragove na kosi. Savršen za svaki dan."
         },
         {
@@ -34,8 +34,8 @@ var config = {
             name: "Pamučni scrunchie",
             category: "scrunchie",
             price: 450,
-            image: "https://images.pexels.com/photos/7446425/pexels-photo-7446425.jpeg?auto=compress&cs=tinysrgb&w=640&h=800",
-            alt: "Pamučni scrunchie u neutralnom tonu",
+            image: "https://images.pexels.com/photos/6044144/pexels-photo-6044144.jpeg?auto=compress&cs=tinysrgb&w=400&h=400",
+            alt: "Pamučni scrunchie u toplim tonovima",
             desc: "Od 100% pamuka — idealan za svakodnevnu upotrebu i sportske aktivnosti."
         },
         {
@@ -43,8 +43,8 @@ var config = {
             name: "Svečani scrunchie sa mašnom",
             category: "scrunchie",
             price: 700,
-            image: "https://images.pexels.com/photos/7725645/pexels-photo-7725645.jpeg?auto=compress&cs=tinysrgb&w=640&h=800",
-            alt: "Svečani scrunchie sa dekorativnom mašnom",
+            image: "https://images.pexels.com/photos/6983530/pexels-photo-6983530.jpeg?auto=compress&cs=tinysrgb&w=400&h=400",
+            alt: "Scrunchie gumice i modni aksesoari u flat lay prikazu",
             desc: "Elegantan model sa mašnom — idealan za izlaske, proslave i poklone."
         },
         {
@@ -52,8 +52,8 @@ var config = {
             name: "Tanke gumice — set od 3",
             category: "hair-tie",
             price: 400,
-            image: "https://images.pexels.com/photos/9729956/pexels-photo-9729956.jpeg?auto=compress&cs=tinysrgb&w=640&h=800",
-            alt: "Set od tri tanke gumice za kosu",
+            image: "https://images.pexels.com/photos/7446420/pexels-photo-7446420.jpeg?auto=compress&cs=tinysrgb&w=400&h=400",
+            alt: "Set gumica i aksesoara za kosu na stolu",
             desc: "Diskretne gumice u neutralnim tonovima. Izdržljive i nežne prema kosi."
         },
         {
@@ -61,7 +61,7 @@ var config = {
             name: "Pamučne gumice — set od 5",
             category: "hair-tie",
             price: 550,
-            image: "https://images.pexels.com/photos/6044135/pexels-photo-6044135.jpeg?auto=compress&cs=tinysrgb&w=640&h=800",
+            image: "https://images.pexels.com/photos/6044135/pexels-photo-6044135.jpeg?auto=compress&cs=tinysrgb&w=400&h=400",
             alt: "Set pamučnih gumica za kosu u raznim bojama",
             desc: "Mekane pamučne gumice u raznim bojama. Idealne za svaki tip kose."
         },
@@ -70,8 +70,8 @@ var config = {
             name: "Poklon set — 4 komada",
             category: "set",
             price: 1200,
-            image: "https://images.pexels.com/photos/6954861/pexels-photo-6954861.jpeg?auto=compress&cs=tinysrgb&w=640&h=800",
-            alt: "Poklon set gumica za kosu u kutiji",
+            image: "https://images.pexels.com/photos/7446425/pexels-photo-7446425.jpeg?auto=compress&cs=tinysrgb&w=400&h=400",
+            alt: "Poklon set gumica i aksesoara za kosu",
             desc: "Kombinacija scrunchie-ja i gumica u poklon pakovanju. Savršen poklon za svaku priliku."
         }
     ]
@@ -148,7 +148,7 @@ function renderProducts(els) {
         var categoryLabel = config.categories[product.category] || product.category;
 
         card.innerHTML =
-            '<img src="' + escapeHtml(product.image) + '" alt="' + escapeHtml(product.alt) + '" loading="lazy" width="640" height="800">' +
+            '<img src="' + escapeHtml(product.image) + '" alt="' + escapeHtml(product.alt) + '" loading="lazy" width="400" height="400">' +
             '<div class="product-body">' +
                 '<h3>' + escapeHtml(product.name) + '</h3>' +
                 '<div class="product-meta">' +
