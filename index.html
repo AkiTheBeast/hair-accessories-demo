@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Bella Hair Accessories - Demo</title>
+    <title>Bella Hair - Ukrasne gumice i dodatci za kosu | Pančevo</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
     <link href="styles.css" rel="stylesheet">
@@ -21,16 +21,19 @@
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav ms-auto">
                     <li class="nav-item">
-                        <a class="nav-link" href="#home">Home</a>
+                        <a class="nav-link" href="#home">Početna</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#products">Products</a>
+                        <a class="nav-link" href="#products">Proizvodi</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#about">About</a>
+                        <a class="nav-link" href="#how-to-order">Kako naručiti</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#contact">Contact</a>
+                        <a class="nav-link" href="#about">O nama</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#contact">Kontakt</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link position-relative" href="#cart">
@@ -50,28 +53,32 @@
                 <div class="col-lg-6">
                     <div class="hero-content">
                         <div class="hero-badge mb-3">
-                            <span class="badge bg-pink text-white">Handmade in Serbia 🇷🇸</span>
+                            <span class="badge bg-pink text-white px-3 py-2">✨ Ručna izrada iz Pančeva 🇷🇸</span>
                         </div>
-                        <h1 class="display-4 fw-bold text-dark mb-4">Beautiful Hair Accessories for Every Style</h1>
-                        <p class="lead text-muted mb-4">Premium quality hair ties, scrunchies, and accessories handmade with love in Belgrade. Perfect for expressing your unique style.</p>
+                        <h1 class="display-4 fw-bold text-dark mb-4">Ukrasne gumice i<br>dodatci za kosu</h1>
+                        <p class="lead text-muted mb-4">Premium kvalitet, ručno rađene gumice i ukrasi za kosu iz Pančeva. Dostavljamo u Pančevo i Beograd – naruči lako, plati pouzećem!</p>
                         <div class="d-flex gap-3 flex-column flex-md-row">
                             <button class="btn btn-pink btn-lg" onclick="scrollToProducts()">
-                                <i class="fas fa-shopping-bag me-2"></i>Shop Collection
+                                <i class="fas fa-shopping-bag me-2"></i>Pogledaj kolekciju
                             </button>
-                            <button class="btn btn-outline-pink btn-lg" onclick="scrollToAbout()">
-                                <i class="fas fa-info-circle me-2"></i>Our Story
-                            </button>
+                            <!-- TODO: Replace 381600000000 with real business phone number -->
+                            <a href="https://wa.me/381600000000" target="_blank" class="btn btn-whatsapp btn-lg">
+                                <i class="fab fa-whatsapp me-2"></i>Naruči na WhatsApp
+                            </a>
                         </div>
                         <div class="mt-4">
                             <div class="trust-badges">
                                 <small class="text-muted d-block mb-2">
-                                    <i class="fas fa-truck me-2"></i>Free shipping in Belgrade over 2000 RSD
+                                    <i class="fas fa-truck me-2 text-pink"></i>Besplatna dostava u Pančevu za narudžbine preko 2.000 RSD
                                 </small>
                                 <small class="text-muted d-block mb-2">
-                                    <i class="fas fa-shield-alt me-2"></i>Secure payment processing
+                                    <i class="fas fa-city me-2 text-pink"></i>Dostavljamo i u Beograd!
+                                </small>
+                                <small class="text-muted d-block mb-2">
+                                    <i class="fas fa-money-bill-wave me-2 text-pink"></i>Plaćanje pouzećem – bez avansa
                                 </small>
                                 <small class="text-muted d-block">
-                                    <i class="fas fa-star me-2"></i>4.9/5 customer rating
+                                    <i class="fas fa-star me-2 text-pink"></i>Ocena kupaca: 4.9/5
                                 </small>
                             </div>
                         </div>
@@ -84,20 +91,20 @@
                             <div class="row text-center">
                                 <div class="col-4">
                                     <div class="stat-item">
-                                        <h5 class="text-pink fw-bold">1000+</h5>
-                                        <small class="text-muted">Happy Customers</small>
+                                        <h5 class="text-pink fw-bold">500+</h5>
+                                        <small class="text-muted">Zadovoljnih kupaca</small>
                                     </div>
                                 </div>
                                 <div class="col-4">
                                     <div class="stat-item">
-                                        <h5 class="text-pink fw-bold">50+</h5>
-                                        <small class="text-muted">Unique Designs</small>
+                                        <h5 class="text-pink fw-bold">30+</h5>
+                                        <small class="text-muted">Dizajna</small>
                                     </div>
                                 </div>
                                 <div class="col-4">
                                     <div class="stat-item">
                                         <h5 class="text-pink fw-bold">100%</h5>
-                                        <small class="text-muted">Handmade</small>
+                                        <small class="text-muted">Ručna izrada</small>
                                     </div>
                                 </div>
                             </div>
@@ -115,22 +122,22 @@
                 <div class="col-md-4 text-center">
                     <div class="feature-box p-4">
                         <i class="fas fa-gem fa-3x text-pink mb-3"></i>
-                        <h4>Premium Quality</h4>
-                        <p class="text-muted">Made with finest materials, gentle on your hair</p>
+                        <h4>Premium kvalitet</h4>
+                        <p class="text-muted">Izrađeno od najfinijih materijala, nežno prema kosi</p>
                     </div>
                 </div>
                 <div class="col-md-4 text-center">
                     <div class="feature-box p-4">
-                        <i class="fas fa-palette fa-3x text-pink mb-3"></i>
-                        <h4>Unique Designs</h4>
-                        <p class="text-muted">Exclusive patterns you won't find elsewhere</p>
+                        <i class="fas fa-map-marker-alt fa-3x text-pink mb-3"></i>
+                        <h4>Lokalna dostava</h4>
+                        <p class="text-muted">Pančevo i Beograd – brza isporuka, plaćanje pouzećem</p>
                     </div>
                 </div>
                 <div class="col-md-4 text-center">
                     <div class="feature-box p-4">
                         <i class="fas fa-heart fa-3x text-pink mb-3"></i>
-                        <h4>Handcrafted</h4>
-                        <p class="text-muted">Each piece made with attention to detail</p>
+                        <h4>Ručna izrada</h4>
+                        <p class="text-muted">Svaki komad napravljen s ljubavlju i pažnjom</p>
                     </div>
                 </div>
             </div>
@@ -141,17 +148,17 @@
     <section id="products" class="py-5">
         <div class="container">
             <div class="text-center mb-5">
-                <h2 class="display-5 fw-bold">Our Products</h2>
-                <p class="lead text-muted">Discover our beautiful collection of hair accessories</p>
+                <h2 class="display-5 fw-bold">Naši proizvodi</h2>
+                <p class="lead text-muted">Otkrijte našu kolekciju ukrasnih gumica i dodataka za kosu</p>
             </div>
 
             <!-- Category Filter -->
             <div class="text-center mb-4">
                 <div class="btn-group" role="group">
-                    <button type="button" class="btn btn-outline-pink active" onclick="filterProducts('all')">All Products</button>
-                    <button type="button" class="btn btn-outline-pink" onclick="filterProducts('scrunchies')">Scrunchies</button>
-                    <button type="button" class="btn btn-outline-pink" onclick="filterProducts('clips')">Hair Clips</button>
-                    <button type="button" class="btn btn-outline-pink" onclick="filterProducts('bands')">Headbands</button>
+                    <button type="button" class="btn btn-outline-pink active" onclick="filterProducts('all')">Svi proizvodi</button>
+                    <button type="button" class="btn btn-outline-pink" onclick="filterProducts('scrunchies')">Gumice</button>
+                    <button type="button" class="btn btn-outline-pink" onclick="filterProducts('clips')">Kopče</button>
+                    <button type="button" class="btn btn-outline-pink" onclick="filterProducts('bands')">Trake</button>
                 </div>
             </div>
 
@@ -161,15 +168,15 @@
                 <div class="col-lg-4 col-md-6 product-item" data-category="scrunchies">
                     <div class="card product-card h-100 border-0 shadow-sm">
                         <div class="product-image-container">
-                            <img src="https://images.pexels.com/photos/6044135/pexels-photo-6044135.jpeg?auto=compress&cs=tinysrgb&w=300&h=300" class="card-img-top product-image" alt="Silk Scrunchie">
+                            <img src="https://images.pexels.com/photos/6044135/pexels-photo-6044135.jpeg?auto=compress&cs=tinysrgb&w=300&h=300" class="card-img-top product-image" alt="Svilen šnaler">
                             <div class="product-overlay">
                                 <button class="btn btn-pink btn-sm" onclick="quickView(1)">
-                                    <i class="fas fa-eye me-1"></i>Quick View
+                                    <i class="fas fa-eye me-1"></i>Brzi pregled
                                 </button>
                             </div>
                         </div>
                         <div class="card-body">
-                            <h5 class="card-title">Premium Silk Scrunchie</h5>
+                            <h5 class="card-title">Premium Svilena Gumica</h5>
                             <div class="product-rating mb-2">
                                 <div class="stars">
                                     <i class="fas fa-star text-warning"></i>
@@ -178,19 +185,19 @@
                                     <i class="fas fa-star text-warning"></i>
                                     <i class="fas fa-star text-warning"></i>
                                 </div>
-                                <small class="text-muted">(47 reviews)</small>
+                                <small class="text-muted">(47 recenzija)</small>
                             </div>
-                            <p class="text-muted small">Luxurious silk fabric, perfect for all hair types</p>
+                            <p class="text-muted small">Luksuzni svilen materijal, nežan prema svakom tipu kose</p>
                             <div class="product-badges mb-2">
                                 <span class="badge bg-light text-dark me-1">Premium</span>
-                                <span class="badge bg-success text-white">In Stock</span>
+                                <span class="badge bg-success text-white">Na stanju</span>
                             </div>
                             <div class="d-flex justify-content-between align-items-center">
                                 <div>
-                                    <span class="h5 mb-0 text-pink">1,890 RSD</span>
-                                    <small class="text-muted d-block">Free shipping</small>
+                                    <span class="h5 mb-0 text-pink">1.890 RSD</span>
+                                    <small class="text-muted d-block">Besplatna dostava</small>
                                 </div>
-                                <button class="btn btn-pink btn-sm" onclick="addToCart(1, 'Premium Silk Scrunchie', 1890)">
+                                <button class="btn btn-pink btn-sm" onclick="addToCart(1, 'Premium Svilena Gumica', 1890)">
                                     <i class="fas fa-cart-plus"></i>
                                 </button>
                             </div>
@@ -202,15 +209,15 @@
                 <div class="col-lg-4 col-md-6 product-item" data-category="clips">
                     <div class="card product-card h-100 border-0 shadow-sm">
                         <div class="product-image-container">
-                            <img src="https://images.pexels.com/photos/6044145/pexels-photo-6044145.jpeg?auto=compress&cs=tinysrgb&w=300&h=300" class="card-img-top product-image" alt="Hair Clip">
+                            <img src="https://images.pexels.com/photos/6044145/pexels-photo-6044145.jpeg?auto=compress&cs=tinysrgb&w=300&h=300" class="card-img-top product-image" alt="Kopča za kosu">
                             <div class="product-overlay">
                                 <button class="btn btn-pink btn-sm" onclick="quickView(2)">
-                                    <i class="fas fa-eye me-1"></i>Quick View
+                                    <i class="fas fa-eye me-1"></i>Brzi pregled
                                 </button>
                             </div>
                         </div>
                         <div class="card-body">
-                            <h5 class="card-title">Elegant Hair Clip</h5>
+                            <h5 class="card-title">Elegantna Kopča za Kosu</h5>
                             <div class="product-rating mb-2">
                                 <div class="stars">
                                     <i class="fas fa-star text-warning"></i>
@@ -219,19 +226,19 @@
                                     <i class="fas fa-star text-warning"></i>
                                     <i class="fas fa-star-half-alt text-warning"></i>
                                 </div>
-                                <small class="text-muted">(32 reviews)</small>
+                                <small class="text-muted">(32 recenzije)</small>
                             </div>
-                            <p class="text-muted small">Stylish design with secure grip</p>
+                            <p class="text-muted small">Stilski dizajn s čvrstim stiskom koji traje ceo dan</p>
                             <div class="product-badges mb-2">
-                                <span class="badge bg-info text-white me-1">Popular</span>
-                                <span class="badge bg-success text-white">In Stock</span>
+                                <span class="badge bg-info text-white me-1">Popularno</span>
+                                <span class="badge bg-success text-white">Na stanju</span>
                             </div>
                             <div class="d-flex justify-content-between align-items-center">
                                 <div>
-                                    <span class="h5 mb-0 text-pink">1,290 RSD</span>
-                                    <small class="text-muted d-block">Free shipping</small>
+                                    <span class="h5 mb-0 text-pink">1.290 RSD</span>
+                                    <small class="text-muted d-block">Besplatna dostava</small>
                                 </div>
-                                <button class="btn btn-pink btn-sm" onclick="addToCart(2, 'Elegant Hair Clip', 1290)">
+                                <button class="btn btn-pink btn-sm" onclick="addToCart(2, 'Elegantna Kopča za Kosu', 1290)">
                                     <i class="fas fa-cart-plus"></i>
                                 </button>
                             </div>
@@ -243,15 +250,15 @@
                 <div class="col-lg-4 col-md-6 product-item" data-category="bands">
                     <div class="card product-card h-100 border-0 shadow-sm">
                         <div class="product-image-container">
-                            <img src="https://images.pexels.com/photos/6044144/pexels-photo-6044144.jpeg?auto=compress&cs=tinysrgb&w=300&h=300" class="card-img-top product-image" alt="Headband">
+                            <img src="https://images.pexels.com/photos/6044144/pexels-photo-6044144.jpeg?auto=compress&cs=tinysrgb&w=300&h=300" class="card-img-top product-image" alt="Traka za kosu">
                             <div class="product-overlay">
                                 <button class="btn btn-pink btn-sm" onclick="quickView(3)">
-                                    <i class="fas fa-eye me-1"></i>Quick View
+                                    <i class="fas fa-eye me-1"></i>Brzi pregled
                                 </button>
                             </div>
                         </div>
                         <div class="card-body">
-                            <h5 class="card-title">Comfort Headband</h5>
+                            <h5 class="card-title">Udobna Traka za Kosu</h5>
                             <div class="product-rating mb-2">
                                 <div class="stars">
                                     <i class="fas fa-star text-warning"></i>
@@ -260,19 +267,19 @@
                                     <i class="fas fa-star text-warning"></i>
                                     <i class="fas fa-star text-warning"></i>
                                 </div>
-                                <small class="text-muted">(28 reviews)</small>
+                                <small class="text-muted">(28 recenzija)</small>
                             </div>
-                            <p class="text-muted small">Soft, stretchy material for all-day comfort</p>
+                            <p class="text-muted small">Meka i elastična traka za ceo dan udobnosti</p>
                             <div class="product-badges mb-2">
-                                <span class="badge bg-warning text-dark me-1">Best Seller</span>
-                                <span class="badge bg-success text-white">In Stock</span>
+                                <span class="badge bg-warning text-dark me-1">Najprodavaniji</span>
+                                <span class="badge bg-success text-white">Na stanju</span>
                             </div>
                             <div class="d-flex justify-content-between align-items-center">
                                 <div>
-                                    <span class="h5 mb-0 text-pink">1,590 RSD</span>
-                                    <small class="text-muted d-block">Free shipping</small>
+                                    <span class="h5 mb-0 text-pink">1.590 RSD</span>
+                                    <small class="text-muted d-block">Besplatna dostava</small>
                                 </div>
-                                <button class="btn btn-pink btn-sm" onclick="addToCart(3, 'Comfort Headband', 1590)">
+                                <button class="btn btn-pink btn-sm" onclick="addToCart(3, 'Udobna Traka za Kosu', 1590)">
                                     <i class="fas fa-cart-plus"></i>
                                 </button>
                             </div>
@@ -284,15 +291,15 @@
                 <div class="col-lg-4 col-md-6 product-item" data-category="scrunchies">
                     <div class="card product-card h-100 border-0 shadow-sm">
                         <div class="product-image-container">
-                            <img src="https://images.pexels.com/photos/6954861/pexels-photo-6954861.jpeg?auto=compress&cs=tinysrgb&w=300&h=300" class="card-img-top product-image" alt="Cotton Scrunchie">
+                            <img src="https://images.pexels.com/photos/6954861/pexels-photo-6954861.jpeg?auto=compress&cs=tinysrgb&w=300&h=300" class="card-img-top product-image" alt="Set gumica od pamuka">
                             <div class="product-overlay">
                                 <button class="btn btn-pink btn-sm" onclick="quickView(4)">
-                                    <i class="fas fa-eye me-1"></i>Quick View
+                                    <i class="fas fa-eye me-1"></i>Brzi pregled
                                 </button>
                             </div>
                         </div>
                         <div class="card-body">
-                            <h5 class="card-title">Cotton Scrunchie Set</h5>
+                            <h5 class="card-title">Set Gumica od Pamuka (3 kom)</h5>
                             <div class="product-rating mb-2">
                                 <div class="stars">
                                     <i class="fas fa-star text-warning"></i>
@@ -301,19 +308,19 @@
                                     <i class="fas fa-star text-warning"></i>
                                     <i class="fas fa-star text-warning"></i>
                                 </div>
-                                <small class="text-muted">(51 reviews)</small>
+                                <small class="text-muted">(51 recenzija)</small>
                             </div>
-                            <p class="text-muted small">Pack of 3 colorful cotton scrunchies</p>
+                            <p class="text-muted small">Komplet od 3 šarene pamučne gumice za svaki dan</p>
                             <div class="product-badges mb-2">
-                                <span class="badge bg-danger text-white me-1">Limited</span>
-                                <span class="badge bg-success text-white">In Stock</span>
+                                <span class="badge bg-danger text-white me-1">Ograničene količine</span>
+                                <span class="badge bg-success text-white">Na stanju</span>
                             </div>
                             <div class="d-flex justify-content-between align-items-center">
                                 <div>
-                                    <span class="h5 mb-0 text-pink">2,490 RSD</span>
-                                    <small class="text-muted d-block">Free shipping</small>
+                                    <span class="h5 mb-0 text-pink">2.490 RSD</span>
+                                    <small class="text-muted d-block">Besplatna dostava</small>
                                 </div>
-                                <button class="btn btn-pink btn-sm" onclick="addToCart(4, 'Cotton Scrunchie Set', 2490)">
+                                <button class="btn btn-pink btn-sm" onclick="addToCart(4, 'Set Gumica od Pamuka (3 kom)', 2490)">
                                     <i class="fas fa-cart-plus"></i>
                                 </button>
                             </div>
@@ -325,15 +332,15 @@
                 <div class="col-lg-4 col-md-6 product-item" data-category="clips">
                     <div class="card product-card h-100 border-0 shadow-sm">
                         <div class="product-image-container">
-                            <img src="https://images.pexels.com/photos/36741058/pexels-photo-36741058.jpeg?auto=compress&cs=tinysrgb&w=300&h=300" class="card-img-top product-image" alt="Decorative Clip">
+                            <img src="https://images.pexels.com/photos/36741058/pexels-photo-36741058.jpeg?auto=compress&cs=tinysrgb&w=300&h=300" class="card-img-top product-image" alt="Ukrašena kopča">
                             <div class="product-overlay">
                                 <button class="btn btn-pink btn-sm" onclick="quickView(5)">
-                                    <i class="fas fa-eye me-1"></i>Quick View
+                                    <i class="fas fa-eye me-1"></i>Brzi pregled
                                 </button>
                             </div>
                         </div>
                         <div class="card-body">
-                            <h5 class="card-title">Decorative Hair Clip</h5>
+                            <h5 class="card-title">Ukrašena Kopča s Kristalima</h5>
                             <div class="product-rating mb-2">
                                 <div class="stars">
                                     <i class="fas fa-star text-warning"></i>
@@ -342,19 +349,19 @@
                                     <i class="fas fa-star text-warning"></i>
                                     <i class="far fa-star text-warning"></i>
                                 </div>
-                                <small class="text-muted">(19 reviews)</small>
+                                <small class="text-muted">(19 recenzija)</small>
                             </div>
-                            <p class="text-muted small">Beautiful design with rhinestone details</p>
+                            <p class="text-muted small">Sa raskošnim kristalima – savršena za svečane prilike</p>
                             <div class="product-badges mb-2">
-                                <span class="badge bg-purple text-white me-1">Exclusive</span>
-                                <span class="badge bg-success text-white">In Stock</span>
+                                <span class="badge bg-purple text-white me-1">Ekskluzivno</span>
+                                <span class="badge bg-success text-white">Na stanju</span>
                             </div>
                             <div class="d-flex justify-content-between align-items-center">
                                 <div>
-                                    <span class="h5 mb-0 text-pink">1,790 RSD</span>
-                                    <small class="text-muted d-block">Free shipping</small>
+                                    <span class="h5 mb-0 text-pink">1.790 RSD</span>
+                                    <small class="text-muted d-block">Besplatna dostava</small>
                                 </div>
-                                <button class="btn btn-pink btn-sm" onclick="addToCart(5, 'Decorative Hair Clip', 1790)">
+                                <button class="btn btn-pink btn-sm" onclick="addToCart(5, 'Ukrašena Kopča s Kristalima', 1790)">
                                     <i class="fas fa-cart-plus"></i>
                                 </button>
                             </div>
@@ -366,15 +373,15 @@
                 <div class="col-lg-4 col-md-6 product-item" data-category="bands">
                     <div class="card product-card h-100 border-0 shadow-sm">
                         <div class="product-image-container">
-                            <img src="https://images.pexels.com/photos/7446425/pexels-photo-7446425.jpeg?auto=compress&cs=tinysrgb&w=300&h=300" class="card-img-top product-image" alt="Sports Band">
+                            <img src="https://images.pexels.com/photos/7446425/pexels-photo-7446425.jpeg?auto=compress&cs=tinysrgb&w=300&h=300" class="card-img-top product-image" alt="Sportska traka">
                             <div class="product-overlay">
                                 <button class="btn btn-pink btn-sm" onclick="quickView(6)">
-                                    <i class="fas fa-eye me-1"></i>Quick View
+                                    <i class="fas fa-eye me-1"></i>Brzi pregled
                                 </button>
                             </div>
                         </div>
                         <div class="card-body">
-                            <h5 class="card-title">Sports Headband</h5>
+                            <h5 class="card-title">Sportska Traka za Kosu</h5>
                             <div class="product-rating mb-2">
                                 <div class="stars">
                                     <i class="fas fa-star text-warning"></i>
@@ -383,19 +390,19 @@
                                     <i class="fas fa-star text-warning"></i>
                                     <i class="fas fa-star-half-alt text-warning"></i>
                                 </div>
-                                <small class="text-muted">(23 reviews)</small>
+                                <small class="text-muted">(23 recenzije)</small>
                             </div>
-                            <p class="text-muted small">Moisture-wicking fabric for active lifestyle</p>
+                            <p class="text-muted small">Materijal koji odvodi vlagu – idealno za aktivan životni stil</p>
                             <div class="product-badges mb-2">
-                                <span class="badge bg-primary text-white me-1">Active</span>
-                                <span class="badge bg-success text-white">In Stock</span>
+                                <span class="badge bg-primary text-white me-1">Sport</span>
+                                <span class="badge bg-success text-white">Na stanju</span>
                             </div>
                             <div class="d-flex justify-content-between align-items-center">
                                 <div>
-                                    <span class="h5 mb-0 text-pink">1,390 RSD</span>
-                                    <small class="text-muted d-block">Free shipping</small>
+                                    <span class="h5 mb-0 text-pink">1.390 RSD</span>
+                                    <small class="text-muted d-block">Besplatna dostava</small>
                                 </div>
-                                <button class="btn btn-pink btn-sm" onclick="addToCart(6, 'Sports Headband', 1390)">
+                                <button class="btn btn-pink btn-sm" onclick="addToCart(6, 'Sportska Traka za Kosu', 1390)">
                                     <i class="fas fa-cart-plus"></i>
                                 </button>
                             </div>
@@ -406,46 +413,206 @@
         </div>
     </section>
 
-    <!-- About Section -->
-    <section id="about" class="py-5 bg-light">
+    <!-- How to Order Section -->
+    <section id="how-to-order" class="py-5 bg-pink-soft">
+        <div class="container">
+            <div class="text-center mb-5">
+                <h2 class="display-5 fw-bold">Kako naručiti?</h2>
+                <p class="lead text-muted">Naručivanje je jednostavno i brzo – dostavimo vam na kućna vrata!</p>
+            </div>
+            <div class="row g-4 justify-content-center">
+                <div class="col-md-3 text-center">
+                    <div class="order-step">
+                        <div class="step-number">1</div>
+                        <i class="fas fa-search fa-2x text-pink mb-3"></i>
+                        <h5>Izaberite</h5>
+                        <p class="text-muted small">Pregledajte kolekciju i odaberite omiljene gumice ili dodatke</p>
+                    </div>
+                </div>
+                <div class="col-md-3 text-center">
+                    <div class="order-step">
+                        <div class="step-number">2</div>
+                        <i class="fab fa-whatsapp fa-2x text-pink mb-3"></i>
+                        <h5>Kontaktirajte nas</h5>
+                        <p class="text-muted small">Pošaljite poruku na WhatsApp ili Viber s brojevima i bojama</p>
+                    </div>
+                </div>
+                <div class="col-md-3 text-center">
+                    <div class="order-step">
+                        <div class="step-number">3</div>
+                        <i class="fas fa-truck fa-2x text-pink mb-3"></i>
+                        <h5>Dostava</h5>
+                        <p class="text-muted small">Dostavljamo u Pančevo i Beograd. Lično preuzimanje u Pančevu besplatno!</p>
+                    </div>
+                </div>
+                <div class="col-md-3 text-center">
+                    <div class="order-step">
+                        <div class="step-number">4</div>
+                        <i class="fas fa-hand-holding-usd fa-2x text-pink mb-3"></i>
+                        <h5>Plaćanje</h5>
+                        <p class="text-muted small">Plaćanje pouzećem – platite kad preuzmete paket. Bez avansa!</p>
+                    </div>
+                </div>
+            </div>
+            <div class="text-center mt-5">
+                <div class="d-flex gap-3 justify-content-center flex-wrap">
+                    <a href="https://wa.me/381600000000" target="_blank" class="btn btn-whatsapp btn-lg">
+                        <i class="fab fa-whatsapp me-2"></i>Naruči na WhatsApp
+                    </a>
+                    <a href="viber://chat?number=381600000000" class="btn btn-viber btn-lg">
+                        <i class="fab fa-viber me-2"></i>Naruči na Viber
+                    </a>
+                </div>
+                <p class="text-muted mt-3 small">Ili popunite kontakt formu ispod ⬇️</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Delivery Info Banner -->
+    <section class="py-4 bg-dark text-white">
+        <div class="container">
+            <div class="row text-center g-3">
+                <div class="col-md-4">
+                    <div class="delivery-info-item">
+                        <i class="fas fa-map-marker-alt text-pink me-2"></i>
+                        <strong>Pančevo</strong> – Besplatna dostava ili lično preuzimanje
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="delivery-info-item">
+                        <i class="fas fa-city text-pink me-2"></i>
+                        <strong>Beograd</strong> – Dostava kurirskom službom
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="delivery-info-item">
+                        <i class="fas fa-clock text-pink me-2"></i>
+                        Isporuka <strong>1–2 radna dana</strong>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="py-5 bg-light">
+        <div class="container">
+            <div class="text-center mb-5">
+                <h2 class="display-5 fw-bold">Šta kažu kupci?</h2>
+                <p class="lead text-muted">Pogledajte utiske naših zadovoljnih kupaca iz Pančeva i Beograda</p>
+            </div>
+            <div class="row g-4">
+                <div class="col-md-4">
+                    <div class="testimonial-card card border-0 shadow-sm h-100">
+                        <div class="card-body p-4">
+                            <div class="stars mb-3">
+                                <i class="fas fa-star text-warning"></i>
+                                <i class="fas fa-star text-warning"></i>
+                                <i class="fas fa-star text-warning"></i>
+                                <i class="fas fa-star text-warning"></i>
+                                <i class="fas fa-star text-warning"></i>
+                            </div>
+                            <p class="text-muted fst-italic mb-3">"Naručila sam svilene gumice i oduševljena sam! Neverovatno meke, kosa se više ne lomi. Brza dostava u Pančevu, sve preporučujem!"</p>
+                            <div class="d-flex align-items-center">
+                                <div class="testimonial-avatar bg-pink text-white rounded-circle d-flex align-items-center justify-content-center me-3">
+                                    <span class="fw-bold">MJ</span>
+                                </div>
+                                <div>
+                                    <strong>Milica J.</strong>
+                                    <small class="text-muted d-block"><i class="fas fa-map-marker-alt me-1"></i>Pančevo</small>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="testimonial-card card border-0 shadow-sm h-100">
+                        <div class="card-body p-4">
+                            <div class="stars mb-3">
+                                <i class="fas fa-star text-warning"></i>
+                                <i class="fas fa-star text-warning"></i>
+                                <i class="fas fa-star text-warning"></i>
+                                <i class="fas fa-star text-warning"></i>
+                                <i class="fas fa-star text-warning"></i>
+                            </div>
+                            <p class="text-muted fst-italic mb-3">"Gumice su prelepe i kvalitetne. Naručujem redovno za sebe i za poklon prijateljicama. Plaćanje pouzećem je super, nema rizika!"</p>
+                            <div class="d-flex align-items-center">
+                                <div class="testimonial-avatar bg-pink text-white rounded-circle d-flex align-items-center justify-content-center me-3">
+                                    <span class="fw-bold">AN</span>
+                                </div>
+                                <div>
+                                    <strong>Ana N.</strong>
+                                    <small class="text-muted d-block"><i class="fas fa-map-marker-alt me-1"></i>Beograd</small>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="testimonial-card card border-0 shadow-sm h-100">
+                        <div class="card-body p-4">
+                            <div class="stars mb-3">
+                                <i class="fas fa-star text-warning"></i>
+                                <i class="fas fa-star text-warning"></i>
+                                <i class="fas fa-star text-warning"></i>
+                                <i class="fas fa-star text-warning"></i>
+                                <i class="fas fa-star-half-alt text-warning"></i>
+                            </div>
+                            <p class="text-muted fst-italic mb-3">"Poklonila sam sestri set gumica za rođendan i bila je oduševljena! Pakovanje je divno, izgleda kao pravi poklon. Svaka preporuka!"</p>
+                            <div class="d-flex align-items-center">
+                                <div class="testimonial-avatar bg-pink text-white rounded-circle d-flex align-items-center justify-content-center me-3">
+                                    <span class="fw-bold">SP</span>
+                                </div>
+                                <div>
+                                    <strong>Sara P.</strong>
+                                    <small class="text-muted d-block"><i class="fas fa-map-marker-alt me-1"></i>Pančevo</small>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="about" class="py-5">
         <div class="container">
             <div class="row align-items-center">
                 <div class="col-lg-6">
-                    <img src="https://images.pexels.com/photos/6044135/pexels-photo-6044135.jpeg?auto=compress&cs=tinysrgb&w=500&h=400" alt="Our Workshop" class="img-fluid rounded-3 shadow">
+                    <img src="https://images.pexels.com/photos/6044135/pexels-photo-6044135.jpeg?auto=compress&cs=tinysrgb&w=500&h=400" alt="Naša radionica" class="img-fluid rounded-3 shadow">
                 </div>
                 <div class="col-lg-6">
-                    <h2 class="display-5 fw-bold mb-4">About Bella Hair</h2>
-                    <p class="lead text-muted mb-4">Based in Belgrade, we create beautiful hair accessories that combine style, comfort, and quality.</p>
-                    <p class="text-muted mb-3">Founded with a passion for helping women express their unique style, our handcrafted accessories are made with love and attention to detail. Each piece is designed to be both beautiful and functional.</p>
-                    <p class="text-muted mb-4">We source the finest materials and use traditional techniques combined with modern designs to create accessories that you'll love to wear every day.</p>
+                    <h2 class="display-5 fw-bold mb-4">O Bella Hair</h2>
+                    <p class="lead text-muted mb-4">Iz srca Pančeva, stvaramo ukrasne gumice i dodatke za kosu koji spajaju stil, udobnost i kvalitet.</p>
+                    <p class="text-muted mb-3">Svaki komad nastaje ručno, s ljubavlju i pažnjom prema detaljima. Koristimo materijale koji su nežni prema kosi, a dizajni su jedinstveni – nećete ih naći u radnjama. Cilj nam je da svaka devojka i žena nađe nešto što odgovara njenom stilu.</p>
+                    <p class="text-muted mb-4">Trenutno dostavljamo u Pančevo i Beograd, a u planu je proširivanje na čitavu Srbiju. Pratite nas na Instagramu za nove kolekcije i popuste!</p>
                     <div class="row g-3 mb-4">
                         <div class="col-6">
                             <div class="d-flex align-items-center">
                                 <i class="fas fa-check-circle text-pink me-2"></i>
-                                <span>Handmade in Serbia</span>
+                                <span>Ručna izrada u Pančevu</span>
                             </div>
                         </div>
                         <div class="col-6">
                             <div class="d-flex align-items-center">
                                 <i class="fas fa-check-circle text-pink me-2"></i>
-                                <span>Premium materials</span>
+                                <span>Premium materijali</span>
                             </div>
                         </div>
                         <div class="col-6">
                             <div class="d-flex align-items-center">
                                 <i class="fas fa-check-circle text-pink me-2"></i>
-                                <span>Eco-friendly packaging</span>
+                                <span>Ekološka ambalaža</span>
                             </div>
                         </div>
                         <div class="col-6">
                             <div class="d-flex align-items-center">
                                 <i class="fas fa-check-circle text-pink me-2"></i>
-                                <span>Local delivery available</span>
+                                <span>Dostava u Pančevo i Beograd</span>
                             </div>
                         </div>
                     </div>
                     <button class="btn btn-pink btn-lg" onclick="scrollToProducts()">
-                        <i class="fas fa-shopping-bag me-2"></i>Shop Our Collection
+                        <i class="fas fa-shopping-bag me-2"></i>Pogledaj kolekciju
                     </button>
                 </div>
             </div>
@@ -453,40 +620,98 @@
     </section>
 
     <!-- Contact Section -->
-    <section id="contact" class="py-5">
+    <section id="contact" class="py-5 bg-light">
         <div class="container">
             <div class="text-center mb-5">
-                <h2 class="display-5 fw-bold">Get In Touch</h2>
-                <p class="lead text-muted">Have questions? We'd love to hear from you!</p>
+                <h2 class="display-5 fw-bold">Kontaktirajte nas</h2>
+                <p class="lead text-muted">Imate pitanja? Javite nam se – odgovaramo brzo!</p>
             </div>
-            <div class="row">
-                <div class="col-lg-6 mx-auto">
-                    <div class="card border-0 shadow-sm">
+            <div class="row g-4">
+                <div class="col-lg-5">
+                    <div class="contact-info-card card border-0 shadow-sm h-100">
                         <div class="card-body p-4">
+                            <h5 class="fw-bold mb-4">Brzi kontakt</h5>
+                            <div class="d-grid gap-3">
+                                <a href="https://wa.me/381600000000" target="_blank" class="btn btn-whatsapp btn-lg">
+                                    <i class="fab fa-whatsapp me-2"></i>WhatsApp narudžbina
+                                </a>
+                                <a href="viber://chat?number=381600000000" class="btn btn-viber btn-lg">
+                                    <i class="fab fa-viber me-2"></i>Viber narudžbina
+                                </a>
+                            </div>
+                            <hr class="my-4">
+                            <div class="contact-details">
+                                <div class="d-flex align-items-start mb-3">
+                                    <i class="fas fa-map-marker-alt text-pink mt-1 me-3 fa-lg"></i>
+                                    <div>
+                                        <strong>Lokacija</strong>
+                                        <p class="text-muted mb-0">Pančevo, Srbija</p>
+                                        <small class="text-muted">Lično preuzimanje po dogovoru</small>
+                                    </div>
+                                </div>
+                                <div class="d-flex align-items-start mb-3">
+                                    <i class="fas fa-truck text-pink mt-1 me-3 fa-lg"></i>
+                                    <div>
+                                        <strong>Dostava</strong>
+                                        <p class="text-muted mb-0">Pančevo i Beograd</p>
+                                        <small class="text-muted">1–2 radna dana, plaćanje pouzećem</small>
+                                    </div>
+                                </div>
+                                <div class="d-flex align-items-start">
+                                    <i class="fas fa-clock text-pink mt-1 me-3 fa-lg"></i>
+                                    <div>
+                                        <strong>Radno vreme</strong>
+                                        <p class="text-muted mb-0">Pon–Sub: 9:00 – 20:00</p>
+                                        <small class="text-muted">Odgovaramo na poruke odmah!</small>
+                                    </div>
+                                </div>
+                            </div>
+                            <hr class="my-4">
+                            <div class="text-center">
+                                <p class="text-muted small mb-2">Pratite nas na društvenim mrežama:</p>
+                                <div class="d-flex justify-content-center gap-3">
+                                    <a href="#" class="text-pink fs-3"><i class="fab fa-instagram"></i></a>
+                                    <a href="#" class="text-pink fs-3"><i class="fab fa-facebook"></i></a>
+                                    <a href="#" class="text-pink fs-3"><i class="fab fa-tiktok"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-7">
+                    <div class="card border-0 shadow-sm h-100">
+                        <div class="card-body p-4">
+                            <h5 class="fw-bold mb-4">Pošaljite poruku</h5>
                             <form id="contact-form">
                                 <div class="mb-3">
-                                    <label for="name" class="form-label">Name</label>
-                                    <input type="text" class="form-control" id="name" required>
+                                    <label for="name" class="form-label">Ime i prezime</label>
+                                    <input type="text" class="form-control" id="name" placeholder="Vaše ime" required>
+                                </div>
+                                <div class="mb-3">
+                                    <label for="phone" class="form-label">Telefon (opciono)</label>
+                                    <input type="tel" class="form-control" id="phone" placeholder="+381 60 000 0000">
                                 </div>
                                 <div class="mb-3">
                                     <label for="email" class="form-label">Email</label>
-                                    <input type="email" class="form-control" id="email" required>
+                                    <input type="email" class="form-control" id="email" placeholder="vasa@email.com" required>
                                 </div>
                                 <div class="mb-3">
-                                    <label for="message" class="form-label">Message</label>
-                                    <textarea class="form-control" id="message" rows="4" required></textarea>
+                                    <label for="city" class="form-label">Grad</label>
+                                    <select class="form-select" id="city">
+                                        <option value="">Izaberite grad</option>
+                                        <option value="pancevo">Pančevo</option>
+                                        <option value="beograd">Beograd</option>
+                                        <option value="drugo">Drugi grad</option>
+                                    </select>
                                 </div>
-                                <button type="submit" class="btn btn-pink w-100">
-                                    <i class="fas fa-paper-plane me-2"></i>Send Message
+                                <div class="mb-3">
+                                    <label for="message" class="form-label">Poruka / Narudžbina</label>
+                                    <textarea class="form-control" id="message" rows="4" placeholder="Opišite šta želite da naručite ili postavite pitanje..." required></textarea>
+                                </div>
+                                <button type="submit" class="btn btn-pink w-100 btn-lg">
+                                    <i class="fas fa-paper-plane me-2"></i>Pošalji poruku
                                 </button>
                             </form>
-                        </div>
-                    </div>
-                    <div class="text-center mt-4">
-                        <div class="d-flex justify-content-center gap-3">
-                            <a href="#" class="text-pink fs-4"><i class="fab fa-instagram"></i></a>
-                            <a href="#" class="text-pink fs-4"><i class="fab fa-facebook"></i></a>
-                            <a href="#" class="text-pink fs-4"><i class="fab fa-tiktok"></i></a>
                         </div>
                     </div>
                 </div>
@@ -495,16 +720,44 @@
     </section>
 
     <!-- Footer -->
-    <footer class="bg-dark text-white py-4">
+    <footer class="bg-dark text-white py-5">
         <div class="container">
+            <div class="row g-4">
+                <div class="col-md-4">
+                    <h5><i class="fas fa-ribbon text-pink me-2"></i>Bella Hair</h5>
+                    <p class="text-muted">Ukrasne gumice i dodatci za kosu ručne izrade iz Pančeva</p>
+                    <div class="d-flex gap-3 mt-3">
+                        <a href="#" class="text-pink fs-4"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="text-pink fs-4"><i class="fab fa-facebook"></i></a>
+                        <a href="#" class="text-pink fs-4"><i class="fab fa-tiktok"></i></a>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <h6 class="text-white fw-bold mb-3">Brze veze</h6>
+                    <ul class="list-unstyled">
+                        <li class="mb-2"><a href="#products" class="text-muted text-decoration-none">Proizvodi</a></li>
+                        <li class="mb-2"><a href="#how-to-order" class="text-muted text-decoration-none">Kako naručiti</a></li>
+                        <li class="mb-2"><a href="#about" class="text-muted text-decoration-none">O nama</a></li>
+                        <li class="mb-2"><a href="#contact" class="text-muted text-decoration-none">Kontakt</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-4">
+                    <h6 class="text-white fw-bold mb-3">Dostava</h6>
+                    <ul class="list-unstyled text-muted">
+                        <li class="mb-2"><i class="fas fa-check text-pink me-2"></i>Pančevo – besplatna dostava</li>
+                        <li class="mb-2"><i class="fas fa-check text-pink me-2"></i>Beograd – kurirska dostava</li>
+                        <li class="mb-2"><i class="fas fa-check text-pink me-2"></i>Plaćanje pouzećem</li>
+                        <li class="mb-2"><i class="fas fa-check text-pink me-2"></i>Lično preuzimanje u Pančevu</li>
+                    </ul>
+                </div>
+            </div>
+            <hr class="border-secondary mt-4">
             <div class="row">
                 <div class="col-md-6">
-                    <h5><i class="fas fa-ribbon text-pink me-2"></i>Bella Hair</h5>
-                    <p class="text-muted">Beautiful hair accessories for every style</p>
+                    <p class="text-muted mb-0">© 2024 Bella Hair. Sva prava zadržana.</p>
                 </div>
                 <div class="col-md-6 text-md-end">
-                    <p class="text-muted mb-0">© 2024 Bella Hair. Demo Website</p>
-                    <small class="text-muted">Made with ❤️ in Belgrade</small>
+                    <small class="text-muted">Napravljeno s ❤️ u Pančevu 🇷🇸</small>
                 </div>
             </div>
         </div>
@@ -515,18 +768,18 @@
         <div class="modal-dialog modal-lg">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h5 class="modal-title">Shopping Cart</h5>
+                    <h5 class="modal-title"><i class="fas fa-shopping-cart me-2 text-pink"></i>Korpa</h5>
                     <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
                 </div>
                 <div class="modal-body">
                     <div id="cart-items"></div>
                     <div class="mt-3">
-                        <h5>Total: <span id="cart-total">0 RSD</span></h5>
+                        <h5>Ukupno: <span id="cart-total" class="text-pink">0 RSD</span></h5>
                     </div>
                 </div>
                 <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Continue Shopping</button>
-                    <button type="button" class="btn btn-pink" onclick="checkout()">Checkout</button>
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Nastavi kupovinu</button>
+                    <button type="button" class="btn btn-whatsapp" onclick="checkoutWhatsApp()"><i class="fab fa-whatsapp me-1"></i>Naruči na WhatsApp</button>
                 </div>
             </div>
         </div>
@@ -537,7 +790,7 @@
         <div class="modal-dialog modal-lg">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h5 class="modal-title">Product Details</h5>
+                    <h5 class="modal-title">Detalji proizvoda</h5>
                     <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
                 </div>
                 <div class="modal-body">
@@ -550,12 +803,12 @@
                             <p id="quick-view-description"></p>
                             <h5 id="quick-view-price" class="text-pink"></h5>
                             <div class="mt-3">
-                                <label class="form-label">Quantity:</label>
+                                <label class="form-label">Količina:</label>
                                 <input type="number" class="form-control" value="1" min="1" id="quick-view-quantity">
                             </div>
                             <div class="mt-3">
                                 <button class="btn btn-pink w-100" onclick="addToCartFromQuickView()">
-                                    <i class="fas fa-cart-plus me-2"></i>Add to Cart
+                                    <i class="fas fa-cart-plus me-2"></i>Dodaj u korpu
                                 </button>
                             </div>
                         </div>

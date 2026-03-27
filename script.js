@@ -8,50 +8,50 @@ let currentQuickViewProduct = null;
 const products = {
     1: {
         id: 1,
-        name: 'Premium Silk Scrunchie',
+        name: 'Premium Svilena Gumica',
         price: 1890,
         image: 'https://images.pexels.com/photos/6044135/pexels-photo-6044135.jpeg?auto=compress&cs=tinysrgb&w=300&h=300',
-        description: 'Luxurious silk fabric scrunchie that\'s gentle on your hair while adding elegance to any hairstyle. Perfect for both casual and formal occasions.',
+        description: 'Luksuzna svilena gumica koja je nežna prema kosi, a istovremeno dodaje eleganciju svakoj frizuri. Savršena i za svakodnevne i za svečane prilike.',
         category: 'scrunchies'
     },
     2: {
         id: 2,
-        name: 'Elegant Hair Clip',
+        name: 'Elegantna Kopča za Kosu',
         price: 1290,
         image: 'https://images.pexels.com/photos/6044145/pexels-photo-6044145.jpeg?auto=compress&cs=tinysrgb&w=300&h=300',
-        description: 'Stylish and secure hair clip with a modern design. Perfect for holding hair in place while adding a touch of sophistication to your look.',
+        description: 'Stilska i čvrsta kopča modernog dizajna. Savršena za pričvršćivanje kose tokom čitavog dana.',
         category: 'clips'
     },
     3: {
         id: 3,
-        name: 'Comfort Headband',
+        name: 'Udobna Traka za Kosu',
         price: 1590,
         image: 'https://images.pexels.com/photos/6044144/pexels-photo-6044144.jpeg?auto=compress&cs=tinysrgb&w=300&h=300',
-        description: 'Soft and stretchy headband designed for all-day comfort. Perfect for keeping hair away from your face during work or exercise.',
+        description: 'Meka i elastična traka dizajnirana za udobnost tokom celog dana. Idealna za skidanje kose s lica tokom rada ili vežbanja.',
         category: 'bands'
     },
     4: {
         id: 4,
-        name: 'Cotton Scrunchie Set',
+        name: 'Set Gumica od Pamuka (3 kom)',
         price: 2490,
         image: 'https://images.pexels.com/photos/6954861/pexels-photo-6954861.jpeg?auto=compress&cs=tinysrgb&w=300&h=300',
-        description: 'Pack of 3 colorful cotton scrunchies. Made from high-quality cotton that\'s breathable and comfortable for everyday wear.',
+        description: 'Komplet od 3 šarene pamučne gumice. Izrađene od visokokvalitetnog pamuka koji je prozračan i udoban za svakodnevno nošenje.',
         category: 'scrunchies'
     },
     5: {
         id: 5,
-        name: 'Decorative Hair Clip',
+        name: 'Ukrašena Kopča s Kristalima',
         price: 1790,
         image: 'https://images.pexels.com/photos/36741058/pexels-photo-36741058.jpeg?auto=compress&cs=tinysrgb&w=300&h=300',
-        description: 'Beautiful hair clip with rhinestone details. Adds sparkle and elegance to any hairstyle, perfect for special occasions.',
+        description: 'Raskošna kopča sa kristalnim detaljima. Dodaje sjaj i eleganciju svakoj frizuri – idealna za svečane prilike i slavlja.',
         category: 'clips'
     },
     6: {
         id: 6,
-        name: 'Sports Headband',
+        name: 'Sportska Traka za Kosu',
         price: 1390,
         image: 'https://images.pexels.com/photos/7446425/pexels-photo-7446425.jpeg?auto=compress&cs=tinysrgb&w=300&h=300',
-        description: 'Moisture-wicking sports headband designed for active lifestyle. Keeps hair in place during exercise while staying comfortable.',
+        description: 'Sportska traka od materijala koji odvodi vlagu – dizajnirana za aktivan životni stil. Kosa ostaje na mestu tokom vežbanja.',
         category: 'bands'
     }
 };
@@ -94,7 +94,7 @@ function addToCart(productId, productName, price) {
     }
     
     updateCartCount();
-    showNotification('Product added to cart!', 'success');
+    showNotification('Proizvod dodat u korpu!', 'success');
 }
 
 // Add to Cart from Quick View
@@ -136,7 +136,7 @@ function showCart() {
     const cartTotal = document.getElementById('cart-total');
     
     if (cart.length === 0) {
-        cartItems.innerHTML = '<p class="text-center text-muted">Your cart is empty</p>';
+        cartItems.innerHTML = '<p class="text-center text-muted">Vaša korpa je prazna</p>';
         cartTotal.textContent = '0 RSD';
     } else {
         let cartHTML = '';
@@ -189,29 +189,39 @@ function removeFromCart(productId) {
     cart = cart.filter(item => item.id !== productId);
     updateCartCount();
     showCart(); // Refresh cart display
-    showNotification('Product removed from cart', 'info');
+    showNotification('Proizvod uklonjen iz korpe', 'info');
 }
 
-// Checkout Function
-function checkout() {
+// Checkout Function (WhatsApp)
+function checkoutWhatsApp() {
     if (cart.length === 0) {
-        showNotification('Your cart is empty!', 'error');
+        showNotification('Vaša korpa je prazna!', 'error');
         return;
     }
-    
+
+    let orderText = 'Zdravo! Želim da naručim:\n\n';
+    let total = 0;
+
+    cart.forEach(item => {
+        const itemTotal = item.price * item.quantity;
+        total += itemTotal;
+        orderText += `- ${item.name} x${item.quantity} = ${itemTotal.toLocaleString('sr-RS')} RSD\n`;
+    });
+
+    orderText += `\n*Ukupno: ${total.toLocaleString('sr-RS')} RSD*`;
+    orderText += '\n\nGrad dostave: ';
+
+    const encodedText = encodeURIComponent(orderText);
+    window.open(`https://wa.me/381600000000?text=${encodedText}`, '_blank');
+
     // Close cart modal
     const cartModal = bootstrap.Modal.getInstance(document.getElementById('cartModal'));
-    cartModal.hide();
-    
-    // Show checkout confirmation
-    showNotification('Proceeding to checkout... (Demo - In real app, this would go to payment page)', 'success');
-    
-    // Clear cart after successful checkout (in demo)
-    setTimeout(() => {
-        cart = [];
-        updateCartCount();
-        showNotification('Thank you for your order! (Demo)', 'success');
-    }, 2000);
+    if (cartModal) cartModal.hide();
+}
+
+// Legacy checkout function
+function checkout() {
+    checkoutWhatsApp();
 }
 
 // Quick View Function
@@ -237,8 +247,10 @@ function filterProducts(category) {
     // Update active button
     buttons.forEach(btn => {
         btn.classList.remove('active');
-        if (btn.textContent.toLowerCase().includes(category) || 
-            (category === 'all' && btn.textContent === 'All Products')) {
+        if ((category === 'all' && btn.textContent.trim() === 'Svi proizvodi') ||
+            (category === 'scrunchies' && btn.textContent.trim() === 'Gumice') ||
+            (category === 'clips' && btn.textContent.trim() === 'Kopče') ||
+            (category === 'bands' && btn.textContent.trim() === 'Trake')) {
             btn.classList.add('active');
         }
     });
@@ -273,7 +285,7 @@ function handleContactForm() {
     console.log('Contact form submitted:', { name, email, message });
     
     // Show success message
-    showNotification('Thank you for your message! We\'ll get back to you soon.', 'success');
+    showNotification('Hvala na poruci! Javićemo vam se uskoro. 💕', 'success');
     
     // Reset form
     document.getElementById('contact-form').reset();
@@ -359,7 +371,7 @@ function addToCart(productId, productName, price) {
     
     if (existingItem) {
         existingItem.quantity += 1;
-        showNotification(`${productName} quantity updated!`, 'success', 2000);
+        showNotification(`${productName} – količina ažurirana!`, 'success', 2000);
     } else {
         cart.push({
             id: productId,
@@ -368,7 +380,7 @@ function addToCart(productId, productName, price) {
             quantity: 1,
             image: products[productId].image
         });
-        showNotification(`${productName} added to cart! 🛒`, 'success', 2500);
+        showNotification(`${productName} dodat u korpu! 🛒`, 'success', 2500);
     }
     
     updateCartCount();
@@ -436,7 +448,7 @@ function quickView(productId) {
     modalBody.innerHTML = `
         <div class="text-center py-4">
             <div class="loading-spinner"></div>
-            <p class="mt-3 text-muted">Loading product details...</p>
+            <p class="mt-3 text-muted">Učitavanje detalja proizvoda...</p>
         </div>
     `;
     
@@ -466,22 +478,22 @@ function quickView(productId) {
                             <i class="fas fa-star text-warning"></i>
                             <i class="fas fa-star-half-alt text-warning"></i>
                         </div>
-                        <small class="text-muted">(42 reviews)</small>
+                        <small class="text-muted">(42 recenzije)</small>
                     </div>
                     <p id="quick-view-description"></p>
                     <h5 id="quick-view-price" class="text-pink"></h5>
                     <div class="mt-3">
-                        <label class="form-label">Quantity:</label>
+                        <label class="form-label">Količina:</label>
                         <input type="number" class="form-control" value="1" min="1" max="10" id="quick-view-quantity">
                     </div>
                     <div class="mt-3">
                         <button class="btn btn-pink w-100" onclick="addToCartFromQuickView()">
-                            <i class="fas fa-cart-plus me-2"></i>Add to Cart
+                            <i class="fas fa-cart-plus me-2"></i>Dodaj u korpu
                         </button>
                     </div>
                     <div class="mt-2">
                         <small class="text-muted">
-                            <i class="fas fa-truck me-1"></i>Free shipping
+                            <i class="fas fa-truck me-1"></i>Besplatna dostava u Pančevu
                         </small>
                     </div>
                 </div>
@@ -611,7 +623,7 @@ function formatPrice(price) {
 
 // Add to wishlist (placeholder function)
 function addToWishlist(productId) {
-    showNotification('Added to wishlist! (Demo feature)', 'info');
+    showNotification('Dodato u listu želja! (Demo funkcija)', 'info');
 }
 
 // Share product (placeholder function)
