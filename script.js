@@ -21,7 +21,7 @@ var config = {
         },
         {
             name: "Milica S.",
-            text: "Kona\u010dno gumice koje ne kidaju kosu! Nosim ih svaki dan i ve\u0107 sam naru\u010dila jo\u0161 dva seta. Isporuka bila brza i uredna.",
+            text: "Odli\u010dan kvalitet i prelepe boje! Nosim ih svaki dan i ve\u0107 sam naru\u010dila jo\u0161 dva seta. Isporuka bila brza i uredna.",
             location: "Beograd"
         },
         {
@@ -45,7 +45,7 @@ var config = {
             price: 550,
             image: "https://images.pexels.com/photos/6044139/pexels-photo-6044139.jpeg?auto=compress&cs=tinysrgb&w=400&h=400",
             alt: "Kolekcija svilenkastih scrunchie gumica u raznim bojama",
-            desc: "Mekan satenski scrunchie koji ne ostavlja tragove na kosi. Savr\u0161en za svaki dan.",
+            desc: "Mekan satenski scrunchie od glatke tkanine, bez metalnih delova. Savr\u0161en za svaki dan.",
             leadTime: "2\u20133 dana"
         },
         {
@@ -75,7 +75,7 @@ var config = {
             price: 400,
             image: "https://images.pexels.com/photos/7446420/pexels-photo-7446420.jpeg?auto=compress&cs=tinysrgb&w=400&h=400",
             alt: "Set gumica i aksesoara za kosu na stolu",
-            desc: "Diskretne gumice u neutralnim tonovima. Izdr\u017eljive i ne\u017ene prema kosi.",
+            desc: "Diskretne gumice u neutralnim tonovima sa mekanom elasti\u010dnom trakom.",
             leadTime: "1\u20132 dana"
         },
         {
