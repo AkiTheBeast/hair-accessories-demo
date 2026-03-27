@@ -330,7 +330,130 @@ footer {
     border-top: 1px solid var(--border-light);
 }
 
-/* Responsive Design */
+/* Responsive Design - Balanced Approach */
+@media (max-width: 1200px) {
+    .hero-content h1 {
+        font-size: 2.8rem;
+    }
+    
+    .hero-stats {
+        padding: 0.75rem;
+    }
+    
+    .stat-item h5 {
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 992px) {
+    .hero-section {
+        text-align: center;
+        padding: 4rem 0;
+        min-height: auto;
+    }
+    
+    .hero-content h1 {
+        font-size: 2.5rem;
+        line-height: 1.3;
+        margin-bottom: 1.5rem;
+    }
+    
+    .hero-content .lead {
+        font-size: 1.1rem;
+        margin-bottom: 1.5rem;
+    }
+    
+    .hero-image {
+        margin-top: 2rem;
+        order: 2;
+    }
+    
+    .hero-content {
+        order: 1;
+    }
+    
+    .d-flex.gap-3 {
+        gap: 1rem !important;
+    }
+    
+    .btn-lg {
+        padding: 0.75rem 1.25rem;
+        font-size: 1rem;
+    }
+    
+    .feature-box {
+        margin-bottom: 1.5rem;
+        padding: 1.5rem;
+    }
+    
+    .product-card {
+        margin-bottom: 1.5rem;
+    }
+    
+    .product-image {
+        height: 280px;
+    }
+    
+    .product-overlay .btn {
+        padding: 0.5rem 1rem;
+        font-size: 0.875rem;
+    }
+    
+    .card-body {
+        padding: 1.25rem;
+    }
+    
+    .card-title {
+        font-size: 1.1rem;
+        margin-bottom: 0.75rem;
+    }
+    
+    .text-muted.small {
+        font-size: 0.85rem;
+        line-height: 1.4;
+    }
+    
+    .d-flex.justify-content-between {
+        flex-direction: row;
+        gap: 0.75rem;
+    }
+    
+    .d-flex.justify-content-between .btn {
+        width: auto;
+        padding: 0.75rem;
+    }
+    
+    .btn-group .btn {
+        font-size: 0.875rem;
+        padding: 0.5rem 1rem;
+        margin-bottom: 0.5rem;
+    }
+    
+    .btn-group {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0.5rem;
+        justify-content: center;
+    }
+    
+    .display-5 {
+        font-size: 2rem;
+    }
+    
+    .lead {
+        font-size: 1rem;
+    }
+    
+    .navbar-brand {
+        font-size: 1.25rem;
+    }
+    
+    .navbar-nav .nav-link {
+        font-size: 0.9rem;
+        padding: 0.5rem 0.75rem;
+    }
+}
+
 @media (max-width: 768px) {
     .hero-section {
         text-align: center;
@@ -360,6 +483,7 @@ footer {
     
     .d-flex.gap-3 {
         gap: 1rem !important;
+        flex-direction: column;
     }
     
     .btn-lg {
@@ -715,6 +839,174 @@ body {
     }
 }
 
+/* Desktop Optimizations */
+@media (min-width: 1201px) {
+    .hero-section {
+        padding: 5rem 0;
+        min-height: 100vh;
+        display: flex;
+        align-items: center;
+    }
+    
+    .hero-content h1 {
+        font-size: 3.5rem;
+        line-height: 1.2;
+        margin-bottom: 1.5rem;
+    }
+    
+    .hero-content .lead {
+        font-size: 1.3rem;
+        margin-bottom: 2rem;
+    }
+    
+    .d-flex.gap-3 {
+        gap: 1.5rem !important;
+        flex-direction: row;
+    }
+    
+    .btn-lg {
+        padding: 1rem 2rem;
+        font-size: 1.1rem;
+        min-width: 180px;
+    }
+    
+    .hero-stats {
+        padding: 1.5rem;
+        margin-top: 2rem;
+    }
+    
+    .stat-item h5 {
+        font-size: 1.3rem;
+    }
+    
+    .stat-item small {
+        font-size: 0.85rem;
+    }
+    
+    .trust-badges {
+        padding: 1.5rem;
+        margin-top: 2rem;
+    }
+    
+    .product-image {
+        height: 350px;
+    }
+    
+    .product-card {
+        transition: all 0.3s ease;
+        margin-bottom: 2rem;
+    }
+    
+    .product-card:hover {
+        transform: translateY(-10px) scale(1.02);
+        box-shadow: 0 20px 40px rgba(255, 105, 180, 0.15);
+    }
+    
+    .card-body {
+        padding: 1.5rem;
+    }
+    
+    .card-title {
+        font-size: 1.25rem;
+        margin-bottom: 1rem;
+    }
+    
+    .text-muted.small {
+        font-size: 0.9rem;
+        line-height: 1.5;
+    }
+    
+    .d-flex.justify-content-between {
+        flex-direction: row;
+        align-items: center;
+        gap: 1rem;
+    }
+    
+    .d-flex.justify-content-between .btn {
+        width: auto;
+        padding: 0.75rem 1.5rem;
+        min-width: 120px;
+    }
+    
+    .feature-box {
+        padding: 2rem;
+        margin-bottom: 2rem;
+        transition: all 0.3s ease;
+    }
+    
+    .feature-box:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 15px 30px rgba(0,0,0,0.1);
+    }
+    
+    .btn-group .btn {
+        font-size: 1rem;
+        padding: 0.75rem 1.5rem;
+        margin-bottom: 0;
+        min-width: 140px;
+    }
+    
+    .btn-group {
+        gap: 1rem;
+        justify-content: center;
+        flex-wrap: nowrap;
+    }
+    
+    .display-5 {
+        font-size: 2.5rem;
+    }
+    
+    .lead {
+        font-size: 1.2rem;
+    }
+    
+    .navbar-brand {
+        font-size: 1.5rem;
+    }
+    
+    .navbar-nav .nav-link {
+        font-size: 1rem;
+        padding: 0.75rem 1rem;
+    }
+    
+    .container {
+        max-width: 1200px;
+    }
+}
+
+/* Tablet Optimizations */
+@media (min-width: 769px) and (max-width: 1200px) {
+    .hero-section {
+        padding: 4rem 0;
+        min-height: 90vh;
+    }
+    
+    .hero-content h1 {
+        font-size: 2.8rem;
+        line-height: 1.2;
+    }
+    
+    .hero-content .lead {
+        font-size: 1.2rem;
+    }
+    
+    .product-image {
+        height: 300px;
+    }
+    
+    .feature-box {
+        padding: 1.5rem;
+    }
+    
+    .card-body {
+        padding: 1.25rem;
+    }
+    
+    .card-title {
+        font-size: 1.15rem;
+    }
+}
+
 /* Mobile Product Card Optimizations */
 @media (max-width: 768px) {
     .product-rating {
@@ -764,16 +1056,6 @@ body {
     background-color: #d4edda;
     border: 1px solid #c3e6cb;
     color: #155724;
-    padding: 1rem;
-    border-radius: 0.25rem;
-    margin-bottom: 1rem;
-}
-
-/* Error Message */
-.error-message {
-    background-color: #f8d7da;
-    border: 1px solid #f5c6cb;
-    color: #721c24;
     padding: 1rem;
     border-radius: 0.25rem;
     margin-bottom: 1rem;
