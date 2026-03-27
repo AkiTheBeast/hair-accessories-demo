@@ -4,6 +4,8 @@
     --pink-color: #FF69B4;
     --pink-light: #FFB6C1;
     --pink-dark: #FF1493;
+    --whatsapp-color: #25D366;
+    --viber-color: #7360F2;
     --text-dark: #333;
     --text-muted: #6c757d;
     --border-light: #dee2e6;
@@ -1212,4 +1214,133 @@ section {
 
 .card:hover {
     box-shadow: 0 15px 35px rgba(0,0,0,0.1);
+}
+
+/* WhatsApp & Viber Buttons */
+.btn-whatsapp {
+    background-color: var(--whatsapp-color);
+    border-color: var(--whatsapp-color);
+    color: white;
+    transition: all 0.3s ease;
+}
+
+.btn-whatsapp:hover {
+    background-color: #1da851;
+    border-color: #1da851;
+    color: white;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(37, 211, 102, 0.4);
+}
+
+.btn-viber {
+    background-color: var(--viber-color);
+    border-color: var(--viber-color);
+    color: white;
+    transition: all 0.3s ease;
+}
+
+.btn-viber:hover {
+    background-color: #5a4ad1;
+    border-color: #5a4ad1;
+    color: white;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(115, 96, 242, 0.4);
+}
+
+/* Pink Soft Background */
+.bg-pink-soft {
+    background: linear-gradient(135deg, #fff5f8 0%, #ffe4ed 100%);
+}
+
+/* How to Order Steps */
+.order-step {
+    background: white;
+    border-radius: 20px;
+    padding: 2rem 1.5rem;
+    position: relative;
+    box-shadow: 0 5px 20px rgba(255, 105, 180, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    height: 100%;
+}
+
+.order-step:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 35px rgba(255, 105, 180, 0.2);
+}
+
+.step-number {
+    width: 40px;
+    height: 40px;
+    background: var(--pink-color);
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    font-size: 1.1rem;
+    margin: 0 auto 1rem;
+}
+
+/* Testimonial Cards */
+.testimonial-card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border-radius: 20px !important;
+}
+
+.testimonial-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 35px rgba(255, 105, 180, 0.15) !important;
+}
+
+.testimonial-avatar {
+    width: 48px;
+    height: 48px;
+    min-width: 48px;
+    font-size: 0.85rem;
+}
+
+/* Delivery Info Banner */
+.delivery-info-item {
+    padding: 0.5rem;
+    font-size: 0.95rem;
+}
+
+/* Contact Info Card */
+.contact-info-card {
+    border-radius: 15px !important;
+}
+
+.contact-details .d-flex {
+    padding: 0.5rem 0;
+}
+
+/* Instagram CTA in footer */
+footer a:hover {
+    opacity: 0.8;
+    transform: scale(1.1);
+    display: inline-block;
+}
+
+/* Responsive adjustments for new sections */
+@media (max-width: 768px) {
+    .order-step {
+        padding: 1.5rem 1rem;
+    }
+
+    .step-number {
+        width: 36px;
+        height: 36px;
+        font-size: 1rem;
+    }
+
+    .delivery-info-item {
+        font-size: 0.85rem;
+        padding: 0.25rem;
+    }
+
+    .btn-whatsapp,
+    .btn-viber {
+        font-size: 0.9rem;
+    }
 }
