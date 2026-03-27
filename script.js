@@ -13,6 +13,24 @@ var config = {
     facebook: "https://facebook.com/masnica.pancevo",
     instagram: "https://instagram.com/masnica.pancevo",
 
+    testimonials: [
+        {
+            name: "Jelena M.",
+            text: "Naru\u010dila sam set scrunchie-ja za poklon i prijateljica je bila odu\u0161evljena! Kvalitet materijala je sjajan, a boje su ba\u0161 onakve kao na slikama.",
+            location: "Pan\u010devo"
+        },
+        {
+            name: "Milica S.",
+            text: "Kona\u010dno gumice koje ne kidaju kosu! Nosim ih svaki dan i ve\u0107 sam naru\u010dila jo\u0161 dva seta. Isporuka bila brza i uredna.",
+            location: "Beograd"
+        },
+        {
+            name: "Ana T.",
+            text: "Kupila sam poklon set za sestru za ro\u0111endan. Pakovanje prelepo, gumice mekane i kvalitetne. Svaka preporuka!",
+            location: "Novi Sad"
+        }
+    ],
+
     categories: {
         "scrunchie": "Scrunchie",
         "hair-tie": "Gumice",
@@ -27,7 +45,8 @@ var config = {
             price: 550,
             image: "https://images.pexels.com/photos/6044139/pexels-photo-6044139.jpeg?auto=compress&cs=tinysrgb&w=400&h=400",
             alt: "Kolekcija svilenkastih scrunchie gumica u raznim bojama",
-            desc: "Mekan satenski scrunchie koji ne ostavlja tragove na kosi. Savršen za svaki dan."
+            desc: "Mekan satenski scrunchie koji ne ostavlja tragove na kosi. Savr\u0161en za svaki dan.",
+            leadTime: "2\u20133 dana"
         },
         {
             id: "sc-02",
@@ -36,7 +55,8 @@ var config = {
             price: 450,
             image: "https://images.pexels.com/photos/6044144/pexels-photo-6044144.jpeg?auto=compress&cs=tinysrgb&w=400&h=400",
             alt: "Pamučni scrunchie u toplim tonovima",
-            desc: "Od 100% pamuka — idealan za svakodnevnu upotrebu i sportske aktivnosti."
+            desc: "Od 100% pamuka \u2014 idealan za svakodnevnu upotrebu i sportske aktivnosti.",
+            leadTime: "2\u20133 dana"
         },
         {
             id: "sc-03",
@@ -45,7 +65,8 @@ var config = {
             price: 700,
             image: "https://images.pexels.com/photos/6983530/pexels-photo-6983530.jpeg?auto=compress&cs=tinysrgb&w=400&h=400",
             alt: "Scrunchie gumice i modni aksesoari u flat lay prikazu",
-            desc: "Elegantan model sa mašnom — idealan za izlaske, proslave i poklone."
+            desc: "Elegantan model sa ma\u0161nom \u2014 idealan za izlaske, proslave i poklone.",
+            leadTime: "3\u20134 dana"
         },
         {
             id: "ht-01",
@@ -54,7 +75,8 @@ var config = {
             price: 400,
             image: "https://images.pexels.com/photos/7446420/pexels-photo-7446420.jpeg?auto=compress&cs=tinysrgb&w=400&h=400",
             alt: "Set gumica i aksesoara za kosu na stolu",
-            desc: "Diskretne gumice u neutralnim tonovima. Izdržljive i nežne prema kosi."
+            desc: "Diskretne gumice u neutralnim tonovima. Izdr\u017eljive i ne\u017ene prema kosi.",
+            leadTime: "1\u20132 dana"
         },
         {
             id: "ht-02",
@@ -63,7 +85,8 @@ var config = {
             price: 550,
             image: "https://images.pexels.com/photos/6044135/pexels-photo-6044135.jpeg?auto=compress&cs=tinysrgb&w=400&h=400",
             alt: "Set pamučnih gumica za kosu u raznim bojama",
-            desc: "Mekane pamučne gumice u raznim bojama. Idealne za svaki tip kose."
+            desc: "Mekane pamu\u010dne gumice u raznim bojama. Idealne za svaki tip kose.",
+            leadTime: "1\u20132 dana"
         },
         {
             id: "set-01",
@@ -72,7 +95,8 @@ var config = {
             price: 1200,
             image: "https://images.pexels.com/photos/7446425/pexels-photo-7446425.jpeg?auto=compress&cs=tinysrgb&w=400&h=400",
             alt: "Poklon set gumica i aksesoara za kosu",
-            desc: "Kombinacija scrunchie-ja i gumica u poklon pakovanju. Savršen poklon za svaku priliku."
+            desc: "Kombinacija scrunchie-ja i gumica u poklon pakovanju. Savr\u0161en poklon za svaku priliku.",
+            leadTime: "3\u20135 dana"
         }
     ]
 };
@@ -91,7 +115,9 @@ function getElements() {
         navToggle: document.getElementById("nav-toggle"),
         navMenu: document.getElementById("nav-menu"),
         contactChannels: document.getElementById("contact-channels"),
-        socialLinks: document.getElementById("social-links")
+        socialLinks: document.getElementById("social-links"),
+        testimonialsGrid: document.getElementById("testimonials-grid"),
+        waFloat: document.getElementById("wa-float")
     };
 }
 
@@ -155,6 +181,7 @@ function renderProducts(els) {
                     '<span class="badge">' + escapeHtml(categoryLabel) + '</span>' +
                     '<span class="price">' + formatPrice(product.price) + '</span>' +
                 '</div>' +
+                (product.leadTime ? '<p class="lead-time">\u23F1 Izrada: ' + escapeHtml(product.leadTime) + '</p>' : '') +
                 '<p class="product-desc">' + escapeHtml(product.desc) + '</p>' +
                 '<a class="btn btn-primary btn-small" href="' + waLink(productMessage(product)) + '" target="_blank" rel="noopener">Naruči</a>' +
             '</div>';
@@ -209,6 +236,28 @@ function renderSocialLinks(els) {
         a.textContent = link.label;
         els.socialLinks.appendChild(a);
     });
+}
+
+/* -------------------------------------------
+   Testimonials
+   ------------------------------------------- */
+
+function renderTestimonials(els) {
+    if (!els.testimonialsGrid || !config.testimonials) return;
+
+    els.testimonialsGrid.innerHTML = "";
+
+    config.testimonials.forEach(function(t) {
+        var card = document.createElement("div");
+        card.className = "testimonial-card reveal";
+        card.innerHTML =
+            '<div class="testimonial-stars">\u2605\u2605\u2605\u2605\u2605</div>' +
+            '<p class="testimonial-text">"' + escapeHtml(t.text) + '"</p>' +
+            '<div class="testimonial-author">' + escapeHtml(t.name) + ' <span>\u2014 ' + escapeHtml(t.location) + '</span></div>';
+        els.testimonialsGrid.appendChild(card);
+    });
+
+    observeRevealElements();
 }
 
 /* -------------------------------------------
@@ -316,7 +365,9 @@ function addRevealClasses() {
         ".contact-info",
         ".contact-form",
         ".hero-content",
-        ".hero-image"
+        ".hero-image",
+        ".faq-list",
+        ".payment-info"
     ];
 
     document.querySelectorAll(selectors.join(", ")).forEach(function(el) {
@@ -339,6 +390,11 @@ function init() {
         renderProducts(els);
         renderContactChannels(els);
         renderSocialLinks(els);
+        renderTestimonials(els);
+
+        if (els.waFloat) {
+            els.waFloat.href = waLink("Zdravo! Imam pitanje u vezi gumica za kosu.");
+        }
 
         if (els.filter) {
             els.filter.addEventListener("change", function() {
